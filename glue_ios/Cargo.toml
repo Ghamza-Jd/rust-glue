@@ -1,8 +1,16 @@
 [package]
-name = "glue"
+name = "glue_ios"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+name = "glue"
+crate-type = ["staticlib", "cdylib"]
+
 [dependencies]
+glue_core = { path="../glue_core/" }
+
+[build-dependencies]
+cbindgen = "0.23.0"

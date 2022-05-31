@@ -1,0 +1,7 @@
+#! /bin/bash
+
+cd -
+
+# iOS
+cd glue_ios/scripts
+./release_build
