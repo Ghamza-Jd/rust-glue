@@ -5,4 +5,4 @@ xcodebuild -create-xcframework \
   -headers include/ \
   -library target/aarch64-apple-ios/release/libglue.a \
   -headers include/ \
-  -output Glue.xcframework
+  -output target/Glue.xcframework
