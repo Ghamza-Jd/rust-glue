@@ -1,0 +1,8 @@
+#! /bin/bash
+
+xcodebuild -create-xcframework \
+  -library target/libglue_sim.a \
+  -headers include/ \
+  -library target/aarch64-apple-ios/release/libglue.a \
+  -headers include/ \
+  -output Glue.xcframework

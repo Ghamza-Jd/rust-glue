@@ -1,5 +1,5 @@
 #! /bin/bash
 
-rustup target add aarch64-apple-ios armv7-apple-ios armv7s-apple-ios x86_64-apple-ios i386-apple-ios
+rustup target add aarch64-apple-ios x86_64-apple-ios aarch64-apple-ios-sim
 cargo install cargo-lipo
 cargo install --force cbindgen

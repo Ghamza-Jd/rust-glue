@@ -1,0 +1,4 @@
+module Glue {
+    header "glue_native.h"
+    export *
+}

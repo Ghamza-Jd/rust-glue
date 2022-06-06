@@ -15,7 +15,7 @@ fn setup_cbindgen() {
                 .with_language(C)
                 .generate()
                 .expect("Unable to generate bindings")
-                .write_to_file("src/ffi/glue_native.h");
+                .write_to_file("include/glue_native.h");
         }
         Err(err) => {
             println!("Error: {}", err);
