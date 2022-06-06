@@ -5,3 +5,10 @@ version = 3
 [[package]]
 name = "glue_adr"
 version = "0.1.0"
+dependencies = [
+ "glue_core",
+]
+
+[[package]]
+name = "glue_core"
+version = "0.1.0"
