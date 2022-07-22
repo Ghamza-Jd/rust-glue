@@ -11,6 +11,7 @@ crate-type = ["staticlib", "cdylib"]
 
 [dependencies]
 glue_core = { path="../glue_core/" }
+libc = "0.2.126"
 
 [build-dependencies]
 cbindgen = "0.23.0"
