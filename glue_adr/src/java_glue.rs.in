@@ -1,0 +1,8 @@
+use jni_sys::*;
+
+// ANCHOR: api
+foreign_class!(class AndroidGlue {
+    self_type AndroidGlue;
+    fn AndroidGlue::android_gcd(n: u64, m: u64) -> u64;
+});
+// ANCHOR_END: api

@@ -3,7 +3,19 @@ name = "glue_adr"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "glue_adr"
+crate-type = ["cdylib"]
 
 [dependencies]
 glue_core = { path="../glue_core/" }
+android_logger = "0.11.1"
+jni-sys = "0.3.0"
+log = "0.4.17"
+log-panics = "2.1.0"
+
+[build-dependencies]
+env_logger = "0.9"
+flapigen = "0.6.0-pre9"
+openssl = { version = "0.10.41", features = ["vendored"] }
+openssl-sys = { version = "0.9.75", feature = ["vendored"] }
