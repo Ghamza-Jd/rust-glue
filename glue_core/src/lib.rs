@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use serde_json::json;
 
 pub fn gcd(mut n: u64, mut m: u64) -> u64 {
     assert!(n != 0 && m != 0);
@@ -13,14 +13,17 @@ pub fn gcd(mut n: u64, mut m: u64) -> u64 {
     n
 }
 
-pub fn record_custom_event(event_type: &str) {
-    println!("event: {}", format!("{}", event_type));
+pub fn record_custom_event(event_name: &str) {
     let client = reqwest::blocking::Client::new();
-    let mut map = HashMap::new();
-    map.insert("event", format!("{}", event_type));
     let _res = client
-        .post("http://localhost:3000/events")
-        .json(&map)
+        .post("https://www.google-analytics.com/mp/collect?measurement_id=G-M9GYS9Z1XC&api_secret=kHbbiMrZTAuWveJDWrhtJw")
+        .json(&json!({
+            "client_id": "Rust.Ghamza",
+            "events": [{
+                "name": event_name,
+                "params": {}
+            }]
+        }))
         .send();
 }
 
