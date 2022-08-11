@@ -1,8 +1,10 @@
 use jni_sys::*;
+use crate::AndroidGlue;
 
 // ANCHOR: api
 foreign_class!(class AndroidGlue {
     self_type AndroidGlue;
+    constructor AndroidGlue::new() -> AndroidGlue;
     fn AndroidGlue::android_gcd(n: u64, m: u64) -> u64;
 });
 // ANCHOR_END: api
